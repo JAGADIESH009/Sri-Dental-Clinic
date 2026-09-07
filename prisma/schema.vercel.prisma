@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Doctor {
+  id             String   @id @default(cuid())
+  name           String
+  qualification  String
+  designation    String
+  photo          String?
+  biography      String?
+  specialties    String?
+  registration   String?
+  displayOrder   Int      @default(0)
+  isActive       Boolean  @default(true)
+}
+
+model Service {
+  id             String   @id @default(cuid())
+  name           String
+  description    String?
+  duration       Int      @default(30)
+  price          String?
+  imageUrl       String?
+  isActive       Boolean  @default(true)
+  isFeatured     Boolean  @default(false)
+  displayOrder   Int      @default(0)
+  appointments   Appointment[]
+}
+
+model Appointment {
+  id             String   @id @default(cuid())
+  bookingId      String   @unique
+  patientName    String
+  phone          String
+  email          String?
+  serviceId      String
+  service        Service  @relation(fields: [serviceId], references: [id])
+  date           String
+  time           String
+  status         String   @default("PENDING") // PENDING, CONFIRMED, COMPLETED, CANCELLED, NO_SHOW
+  notes          String?
+  patientType    String   @default("NEW") // NEW, EXISTING
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model ClinicSettings {
+  id                   String  @id @default("singleton")
+  clinicName           String  @default("Sri Dental Clinic")
+  tagline              String  @default("Bright Smiles Rooted in Tradition")
+  phone                String  @default("+91 98664 96237")
+  whatsapp             String  @default("+91 9866496237")
+  email                String  @default("hello@sridentalclinic.in")
+  address              String  @default("Ground Floor, Sri Krishna Enclave, 5-9-470/92/93, Meherababa Colony, Panchasheel Enclave, Yapral, Hyderabad, Secunderabad, Telangana 500087, India")
+  googleMapsUrl        String?
+  plusCode             String  @default("GH32+3F Yapral, Secunderabad, Telangana")
+  hours                String  @default("10:00 AM - 2:00 PM, 5:00 PM - 8:30 PM")
+  bookingDuration      Int     @default(30)
+  bufferTime           Int     @default(0)
+  bookingLeadTime      Int     @default(1)
+  maxAppointmentsPerSlot Int   @default(2) // Since there are two doctors
+}
+
+model Faq {
+  id           String   @id @default(cuid())
+  question     String
+  answer       String
+  displayOrder Int      @default(0)
+  isActive     Boolean  @default(true)
+}

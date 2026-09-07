@@ -46,7 +46,8 @@ export async function createAppointment(data: {
 
     return { success: true, bookingId: appointment.bookingId };
   } catch (error) {
-    console.error("Failed to create appointment", error);
+    console.error("Failed to create appointment:");
+    console.error(error instanceof Error ? error.message : error);
     return { success: false, error: "Database error" };
   }
 }
