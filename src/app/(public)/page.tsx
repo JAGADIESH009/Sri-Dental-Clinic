@@ -77,6 +77,15 @@ export default function Home() {
                   <ArrowRight className="ml-2.5 w-4 h-4 transition-transform group-hover:translate-x-1 opacity-80" />
                 </span>
               </a>
+
+              <a 
+                href="tel:+919866496237"
+                className="group relative hidden lg:inline-flex items-center justify-center bg-transparent border border-white/30 text-white px-7 py-3.5 rounded-full overflow-hidden transition-all hover:bg-white/10 hover:border-white w-auto"
+              >
+                <span className="relative z-10 flex items-center font-medium text-[13px] tracking-wide">
+                  CALL US
+                </span>
+              </a>
             </motion.div>
           </motion.div>
         </div>
