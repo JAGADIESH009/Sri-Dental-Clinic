@@ -13,10 +13,10 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Sri Dental Clinic | Dentist in Yapral, Hyderabad",
+  title: "Sri Dental Clinic",
   description: "Thoughtful dental care in Yapral, with a calm, patient-first experience. Book an appointment today.",
   openGraph: {
-    title: "Sri Dental Clinic | Dentist in Yapral",
+    title: "Sri Dental Clinic",
     description: "Bright Smiles Rooted in Tradition. Thoughtful dental care in Yapral.",
     url: "https://sridentalclinic.in",
     siteName: "Sri Dental Clinic",
