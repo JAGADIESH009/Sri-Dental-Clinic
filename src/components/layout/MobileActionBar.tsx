@@ -4,7 +4,7 @@ import { Phone, CalendarPlus } from "lucide-react";
 
 export function MobileActionBar() {
   return (
-    <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[360px] z-40 flex items-center justify-center">
+    <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-[360px] z-40 flex items-center justify-center pb-[env(safe-area-inset-bottom)]">
       <div className="w-full bg-white/95 backdrop-blur-md border border-[#0a192f]/10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-full flex items-center p-1.5 gap-1">
         
         <a 

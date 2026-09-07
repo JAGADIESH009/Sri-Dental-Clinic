@@ -46,15 +46,15 @@ export function Navbar() {
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
           isScrolled
             ? "bg-background/90 backdrop-blur-md border-b border-border py-3 shadow-sm"
-            : "bg-transparent py-5"
+            : "bg-transparent pt-6 pb-4 md:py-6"
         )}
       >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
             <span className="sr-only">Sri Dental Clinic</span>
-            <div className={cn("relative h-12 w-12 shrink-0 transition-all", !isScrolled && "drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]")}>
-              <Image src="/logo.png" alt="Sri Dental Clinic Logo" fill className="object-contain" sizes="48px" priority />
+            <div className={cn("relative h-10 w-10 md:h-12 md:w-12 shrink-0 transition-all", !isScrolled && "drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]")}>
+              <Image src="/logo.png" alt="Sri Dental Clinic Logo" fill className="object-contain" sizes="(max-width: 768px) 40px, 48px" priority />
             </div>
             <span className={cn(
               "font-heading font-semibold text-lg tracking-tight transition-colors hidden sm:block",
@@ -68,11 +68,11 @@ export function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className={cn("-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 transition-colors", isScrolled ? "text-primary" : "text-white")}
+            className={cn("-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 transition-colors", isScrolled ? "text-primary" : "text-white/90")}
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-6 w-6" strokeWidth={2} aria-hidden="true" />
           </button>
         </div>
 
