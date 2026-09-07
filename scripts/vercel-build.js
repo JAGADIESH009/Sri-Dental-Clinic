@@ -8,6 +8,10 @@ if (process.env.VERCEL === "1") {
     // We use --skip-generate because prisma generate is already handled in postinstall
     execSync("npx prisma db push --skip-generate", { stdio: "inherit" });
     console.log("✅ Database schema initialized successfully.");
+
+    console.log("🌱 Seeding production database...");
+    execSync("npx tsx prisma/seed.ts", { stdio: "inherit" });
+    console.log("✅ Database seeded successfully.");
   } catch (error) {
     console.error("❌ Failed to initialize database schema:", error.message);
     process.exit(1);

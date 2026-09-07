@@ -17,23 +17,17 @@ async function main() {
   })
 
   // Doctors
-  await prisma.doctor.create({
-    data: {
-      name: 'Dr. Prasanthi',
-      qualification: 'MDS',
-      designation: 'Oral & Maxillofacial Surgeon',
-      displayOrder: 1,
-    }
-  })
+  const doctors = [
+    { name: 'Dr. Prasanthi', qualification: 'MDS', designation: 'Oral & Maxillofacial Surgeon', displayOrder: 1 },
+    { name: 'Dr. Bharath Kumar', qualification: 'MDS', designation: 'Oral & Maxillofacial Surgeon', displayOrder: 2 }
+  ]
 
-  await prisma.doctor.create({
-    data: {
-      name: 'Dr. Bharath Kumar',
-      qualification: 'MDS',
-      designation: 'Oral & Maxillofacial Surgeon',
-      displayOrder: 2,
+  for (const d of doctors) {
+    const existing = await prisma.doctor.findFirst({ where: { name: d.name } })
+    if (!existing) {
+      await prisma.doctor.create({ data: d })
     }
-  })
+  }
 
   // Services
   const services = [
@@ -43,7 +37,10 @@ async function main() {
   ]
 
   for (const s of services) {
-    await prisma.service.create({ data: s })
+    const existing = await prisma.service.findFirst({ where: { name: s.name } })
+    if (!existing) {
+      await prisma.service.create({ data: s })
+    }
   }
 
   // Clinic Settings
@@ -64,7 +61,10 @@ async function main() {
   ]
 
   for (const f of faqs) {
-    await prisma.faq.create({ data: f })
+    const existing = await prisma.faq.findFirst({ where: { question: f.question } })
+    if (!existing) {
+      await prisma.faq.create({ data: f })
+    }
   }
 
   console.log('Database seeded successfully.')
