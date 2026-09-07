@@ -66,7 +66,7 @@ export default function Home() {
               A private dental studio in Yapral delivering sophisticated, precision-driven oral healthcare.
             </motion.p>
             
-            <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-12 sm:mt-0">
               <a 
                 href="#book" 
                 className="group relative inline-flex items-center justify-center bg-[#fdfbf7] text-[#0a192f] px-6 py-3 rounded-full overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"

@@ -28,15 +28,27 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  React.useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border py-3 shadow-sm"
-          : "bg-transparent py-5"
-      )}
-    >
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+          isScrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-border py-3 shadow-sm"
+            : "bg-transparent py-5"
+        )}
+      >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
@@ -95,10 +107,12 @@ export function Navbar() {
         </div>
       </nav>
 
+      </header>
+
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-background">
-          <div className="flex items-center justify-between px-6 py-6 border-b border-border">
+        <div className="lg:hidden fixed inset-0 z-[100] bg-background flex flex-col overflow-y-auto">
+          <div className="flex items-center justify-between px-6 py-6 border-b border-border shrink-0">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
                <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-sm">
                 SD
@@ -114,7 +128,7 @@ export function Navbar() {
               <X className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flow-root px-6">
+          <div className="mt-6 flow-root px-6 flex-1">
             <div className="-my-6 divide-y divide-border">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
@@ -141,6 +155,6 @@ export function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
