@@ -32,7 +32,7 @@ export default function Home() {
             src="/hero_clinic_provided.jpg"
             alt="Sri Dental Clinic Interior"
             fill
-            className="object-cover object-[70%_center] sm:object-right"
+            className="object-cover object-[95%_center] sm:object-right"
             priority
           />
         </div>
