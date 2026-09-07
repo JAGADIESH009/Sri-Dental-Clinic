@@ -1,0 +1,184 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Global" [ref=e3]:
+      - link "Sri Dental Clinic Sri Dental Clinic Logo Sri Dental Clinic" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Sri Dental Clinic
+        - img "Sri Dental Clinic Logo" [ref=e8]
+        - generic [ref=e9]: Sri Dental Clinic
+      - generic [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: "#about"
+        - link "Treatments" [ref=e13] [cursor=pointer]:
+          - /url: "#treatments"
+        - link "Doctors" [ref=e14] [cursor=pointer]:
+          - /url: "#doctors"
+        - link "FAQ" [ref=e15] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: "#contact"
+      - link [ref=e18] [cursor=pointer]:
+        - /url: "#book"
+        - button "Book Appointment" [ref=e19]
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - img "Sri Dental Clinic Interior" [ref=e24]
+        - generic [ref=e26]:
+          - paragraph [ref=e27]: Sri Dental Clinic
+          - heading "Bright Smiles, Rooted in Tradition." [level=1] [ref=e28]
+          - paragraph [ref=e29]: A private dental studio in Yapral delivering sophisticated, precision-driven oral healthcare.
+          - generic [ref=e30]:
+            - link "BOOK A CONSULTATION" [ref=e31] [cursor=pointer]:
+              - /url: /#book
+            - link "CALL US" [ref=e35] [cursor=pointer]:
+              - /url: tel:+919866496237
+      - generic [ref=e38]:
+        - heading "Precision dentistry meets uncommon comfort." [level=2] [ref=e39]
+        - paragraph [ref=e40]: We believe that exceptional oral care should feel calm, unhurried, and entirely focused on your well-being. At Sri Dental Clinic, we merge advanced clinical expertise with a refined, patient-first philosophy.
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - heading "Clinical Expertise" [level=2] [ref=e43]
+          - paragraph [ref=e44]: Sophisticated, precision-driven oral healthcare designed for your lasting well-being.
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: 01 —
+              - heading "Cosmetic Dentistry" [level=3] [ref=e49]: CosmeticDentistry
+              - paragraph [ref=e50]: Elevating your natural aesthetics with precision-crafted veneers, crowns, and advanced restorative techniques tailored to your unique facial structure.
+            - img "Cosmetic Dentistry" [ref=e53]
+          - generic [ref=e54]:
+            - img "Pediatric Care" [ref=e57]
+            - generic [ref=e58]:
+              - generic [ref=e59]: 02 —
+              - heading "Pediatric Care" [level=3] [ref=e60]: PediatricCare
+              - paragraph [ref=e61]: Gentle, preventative foundational care ensuring a lifetime of healthy smiles for our youngest patients in a calming, child-friendly environment.
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e64]:
+                - generic [ref=e65]: 03 —
+                - heading "Sedation Dentistry" [level=3] [ref=e66]: SedationDentistry
+              - paragraph [ref=e68]: Experience uncommon comfort. We provide advanced sedation protocols for entirely anxiety-free and unhurried clinical interventions.
+            - img "Sedation Dentistry" [ref=e70]
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: Our Doctors
+          - heading "Meet the specialists caring for every smile." [level=2] [ref=e75]: Meet the specialistscaring for every smile.
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - img "Dr. Prasanthi" [ref=e79]
+            - heading "Dr. Prasanthi" [level=3] [ref=e80]
+            - paragraph [ref=e81]: MDS
+            - paragraph [ref=e82]: Oral & Maxillofacial Surgeon
+          - generic [ref=e83]:
+            - img "Dr. Bharath Kumar" [ref=e85]
+            - heading "Dr. Bharath Kumar" [level=3] [ref=e86]
+            - paragraph [ref=e87]: MDS
+            - paragraph [ref=e88]: Oral & Maxillofacial Surgeon
+      - generic [ref=e91]:
+        - heading "4.9" [level=2] [ref=e92]
+        - paragraph [ref=e104]: Based on 18 Verified Google Reviews
+      - generic [ref=e108]:
+        - heading "Visit the Clinic" [level=2] [ref=e109]
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - heading "Address" [level=3] [ref=e112]
+            - paragraph [ref=e113]: Ground Floor, Sri Krishna Enclave,5-9-470/92/93, Meherababa Colony,Panchasheel Enclave, Yapral,Secunderabad, Telangana 500087
+          - generic [ref=e114]:
+            - heading "Hours" [level=3] [ref=e115]
+            - paragraph [ref=e116]: 10:00 AM – 2:00 PM5:00 PM – 8:30 PM
+          - link "Get Directions" [ref=e118] [cursor=pointer]:
+            - /url: https://www.google.com/maps/dir/?api=1&destination=17.5026875,78.5511875
+      - generic [ref=e123]:
+        - heading "Patient Questions" [level=2] [ref=e125]
+        - generic [ref=e127]:
+          - heading [level=3] [ref=e129]:
+            - button "Do you accept walk-in patients?" [ref=e130]
+          - heading [level=3] [ref=e132]:
+            - button "What payment methods are accepted?" [ref=e133]
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - generic [ref=e138]: Appointments
+          - heading "Request a Consultation" [level=2] [ref=e139]
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e144]: Service & Time
+            - generic [ref=e146]: Details
+            - generic [ref=e147]: Review
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: Select Service
+              - generic [ref=e152]:
+                - generic [ref=e153] [cursor=pointer]: Cosmetic Dentistry
+                - generic [ref=e155] [cursor=pointer]: Pediatric Care
+                - generic [ref=e157] [cursor=pointer]: Sedation Dentistry
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - generic [ref=e161]: Select Date
+                - textbox [ref=e162]
+              - generic [ref=e163]:
+                - generic [ref=e164]: Select Time
+                - textbox [ref=e165]
+            - generic [ref=e166]:
+              - button "Continue" [disabled]
+  - contentinfo [ref=e167]:
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - img "Sri Dental Clinic Logo" [ref=e173]
+            - generic [ref=e174]: Sri Dental Clinic
+          - paragraph [ref=e175]: "\"Bright Smiles Rooted in Tradition\""
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - heading "Navigation" [level=3] [ref=e179]
+              - list [ref=e180]:
+                - listitem [ref=e181]:
+                  - link "Home" [ref=e182] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e183]:
+                  - link "About" [ref=e184] [cursor=pointer]:
+                    - /url: "#about"
+                - listitem [ref=e185]:
+                  - link "Treatments" [ref=e186] [cursor=pointer]:
+                    - /url: "#treatments"
+                - listitem [ref=e187]:
+                  - link "Doctors" [ref=e188] [cursor=pointer]:
+                    - /url: "#doctors"
+                - listitem [ref=e189]:
+                  - link "FAQ" [ref=e190] [cursor=pointer]:
+                    - /url: "#faq"
+                - listitem [ref=e191]:
+                  - link "Book Appointment" [ref=e192] [cursor=pointer]:
+                    - /url: "#book"
+            - generic [ref=e193]:
+              - heading "Contact" [level=3] [ref=e194]
+              - list [ref=e195]:
+                - listitem [ref=e196]: Ground Floor, Sri Krishna Enclave,Meherababa Colony, Panchasheel Enclave,Yapral, Hyderabad 500087
+                - listitem [ref=e197]:
+                  - link "+91 98664 96237" [ref=e198] [cursor=pointer]:
+                    - /url: tel:+919866496237
+                - listitem [ref=e199]:
+                  - link "WhatsApp" [ref=e200] [cursor=pointer]:
+                    - /url: https://wa.me/9866496237
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - heading "Hours" [level=3] [ref=e203]
+              - list [ref=e204]:
+                - listitem [ref=e205]: Everyday
+                - listitem [ref=e206]: 10:00 AM – 2:00 PM
+                - listitem [ref=e207]: 5:00 PM – 8:30 PM
+                - listitem [ref=e208]: Appointment Required
+            - generic [ref=e209]:
+              - heading "Payments & Facilities" [level=3] [ref=e210]
+              - list [ref=e211]:
+                - listitem [ref=e212]: Credit & Debit Cards
+                - listitem [ref=e213]: Google Pay / UPI
+                - listitem [ref=e214]: Free Parking Available
+      - generic [ref=e215]:
+        - paragraph [ref=e216]: © 2026 Sri Dental Clinic. All rights reserved.
+        - link "Admin Login" [ref=e218] [cursor=pointer]:
+          - /url: /admin
