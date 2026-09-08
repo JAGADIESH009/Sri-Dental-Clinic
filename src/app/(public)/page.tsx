@@ -32,48 +32,48 @@ export default function Home() {
             src="/hero_clinic_provided.jpg"
             alt="Sri Dental Clinic Interior"
             fill
-            className="object-cover object-[78%_center] sm:object-right"
+            className="object-cover object-[94%_center] sm:object-right"
             priority
           />
         </div>
 
         {/* Gradient Overlay Layers */}
-        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-[#0a192f]/95 from-[0%] via-[#0a192f]/80 via-[40%] to-transparent to-[75%] sm:from-[#0a192f] sm:from-[15%] sm:via-[#0a192f]/80 sm:via-[50%] sm:to-[85%]" />
-        <div className="absolute inset-x-0 top-0 h-48 z-10 pointer-events-none bg-gradient-to-b from-[#0a192f]/70 via-[#0a192f]/30 to-transparent sm:from-[#0a192f]/80 sm:via-[#0a192f]/40" />
-        <div className="absolute inset-x-0 bottom-0 h-40 z-10 pointer-events-none bg-gradient-to-t from-[#0a192f]/40 to-transparent" />
+        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-[#0a192f] from-[15%] via-[#0a192f]/80 via-[50%] to-transparent to-[85%]" />
+        <div className="absolute inset-x-0 top-0 h-48 z-10 pointer-events-none bg-gradient-to-b from-[#0a192f]/80 via-[#0a192f]/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-40 z-10 pointer-events-none bg-gradient-to-t from-[#0a192f]/30 to-transparent" />
 
         {/* Content Layer */}
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto mt-auto sm:mt-0 pb-20 sm:pb-0">
+        <div className="relative z-20 w-full max-w-[1600px] mx-auto mt-auto sm:mt-0 pb-12 sm:pb-0">
           <motion.div
-            className="flex flex-col max-w-[280px] sm:max-w-[480px]"
+            className="flex flex-col max-w-[480px]"
             initial="hidden" animate="show"
             variants={{
               hidden: {},
               show: { transition: { staggerChildren: 0.15 } }
             }}
           >
-            <motion.p variants={FADE_UP} className="text-[11px] sm:text-xs font-medium tracking-[0.15em] sm:tracking-[0.25em] uppercase text-white/60 sm:text-white/70 mb-3 sm:mb-6">
+            <motion.p variants={FADE_UP} className="text-[10px] sm:text-xs font-medium tracking-[0.25em] uppercase text-white/70 mb-8 sm:mb-6">
               Sri Dental Clinic
             </motion.p>
 
             <motion.h1
               variants={FADE_UP}
-              className="text-[34px] md:text-5xl lg:text-[72px] font-serif font-light text-white leading-[1.05] tracking-tight mb-4 sm:mb-8 drop-shadow-sm max-w-[260px] sm:max-w-none"
+              className="text-[38px] md:text-5xl lg:text-[72px] font-serif font-light text-white leading-[1.05] tracking-tight mb-5 sm:mb-8 drop-shadow-sm max-w-[340px] sm:max-w-none"
             >
               Bright Smiles,<br /> Rooted in <span className="italic text-white/90">Tradition.</span>
             </motion.h1>
 
-            <motion.p variants={FADE_UP} className="text-[14px] md:text-lg text-white/75 sm:text-white/80 font-light leading-[1.5] mb-8 sm:mb-10 max-w-[240px] sm:max-w-[480px]">
+            <motion.p variants={FADE_UP} className="text-[15px] md:text-lg text-white/80 font-light leading-[1.6] mb-10 max-w-[280px] sm:max-w-[480px]">
               A private dental studio in Yapral delivering sophisticated, precision-driven oral healthcare.
             </motion.p>
 
             <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-2 sm:mt-0">
               <a
                 href="#book"
-                className="group relative inline-flex items-center justify-center bg-[#fdfbf7] text-[#0a192f] px-6 sm:px-7 py-3.5 rounded-full overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] w-auto max-w-[320px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+                className="group relative inline-flex items-center justify-center bg-[#fdfbf7] text-[#0a192f] px-7 py-3.5 rounded-full overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] w-auto max-w-[320px] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
               >
                 <span className="relative z-10 flex items-center font-medium text-[13px] tracking-wide">
-                  Book a consultation
+                  BOOK A CONSULTATION
                   <ArrowRight className="ml-2.5 w-4 h-4 transition-transform group-hover:translate-x-1 opacity-80" />
                 </span>
               </a>
