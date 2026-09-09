@@ -1,5 +1,6 @@
 import React from "react";
 import LocationMapWrapper from "@/components/home/LocationMapWrapper";
+import { MapPin, CircleParking } from "lucide-react";
 
 export const LocationSection = () => {
   return (
@@ -18,19 +19,19 @@ export const LocationSection = () => {
             {/*  Masthead Actions  */}
             <div className="flex flex-wrap items-center gap-4 pt-6">
               <a
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-primary text-primary-foreground text-label font-medium tracking-widest  hover:bg-black transition-all rounded-full"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-ui font-semibold hover:opacity-90 transition-opacity rounded-full"
                 href="https://www.google.com/maps/dir/?api=1&destination=12.9716,77.5946"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span className="material-symbols-outlined text-body">near_me</span>
-                <span className="">Get Directions</span>
+                <MapPin className="w-4 h-4" />
+                <span>Get Directions</span>
               </a>
 
-              <div className="flex items-center gap-4 pl-2 sm:pl-4 text-label text-secondary pt-2 sm:pt-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-body text-muted">local_parking</span>
-                  <span className="text-muted">Valet Parking Available</span>
+              <div className="flex items-center gap-4 pl-2 sm:pl-4 text-ui text-secondary pt-2 sm:pt-0">
+                <div className="flex items-center gap-2">
+                  <CircleParking className="w-4 h-4 text-muted" />
+                  <span className="text-secondary font-medium">Valet Parking Available</span>
                 </div>
               </div>
             </div>
