@@ -6,8 +6,8 @@ import * as maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 const CLINIC_COORDS = {
-  lat: 17.5026875,
-  lng: 78.5511875
+  lat: 12.9715987,
+  lng: 77.5945627
 };
 
 // Raster tile style using OpenStreetMap — guaranteed to render roads, labels, and detail
@@ -40,7 +40,7 @@ const RASTER_STYLE: maplibregl.StyleSpecification = {
 export default function LocationMap() {
 
   return (
-    <div className="relative w-full h-full rounded-[calc(2.5rem-0.5rem)] overflow-hidden group/map">
+    <div className="relative w-full h-full rounded-xl overflow-hidden group/map">
       <Map
         mapLib={maplibregl}
         initialViewState={{

@@ -1,132 +1,219 @@
 "use client";
 
 import * as React from "react";
-import { Star } from "lucide-react";
+import { Star, BadgeCheck } from "lucide-react";
 import { motion } from "motion/react";
 
-const reviews = [
-  {
-    name: "Saritha Athelli",
-    text: "had my dental implant treatment done with Dr. Bharath at Sri Dental Clinic, Yapral, and I am very happy with the results. The doctor is highly skilled, explains everything clearly, and makes the patient feel comfortable throughout the procedure Thankyou"
-  },
+const featuredReview = {
+  name: "Saritha Athelli",
+  text: "Had my dental implant treatment done with Dr. Rohan at Sri Dental Clinic, and I am very happy with the results. The doctor is highly skilled, explains everything clearly, and makes the patient feel comfortable throughout the procedure.",
+  treatment: "Dental Implants"
+};
+
+const supportingReviews = [
   {
     name: "Alekhya Reddy",
-    text: "I have visited sri dental clinic in yapral for my first ever root canal treatment. I was feeling anxious but Dr.prasanthi was calm and explained the procedure in detail and ensured i was comfortable throughout the procedure."
+    text: "I visited Sri Dental Clinic for my first ever root canal treatment. I was feeling anxious but Dr. Ananya was calm, explained the procedure in detail and ensured I was comfortable.",
+    treatment: "Root Canal Treatment",
+    category: "Endodontics",
+    bg: "bg-[#f4f2ea]",
+    textCol: "text-primary",
+    accent: "text-accent"
   },
   {
     name: "Ridh Zee",
-    text: "Good service , doctors are nice and very patient. They will explain everything in detail about procedure."
+    text: "Good service, doctors are nice and very patient. They will explain everything in detail about the procedure. The clinic feels more like a serene architectural space.",
+    treatment: "General Consultation",
+    category: "General Care",
+    bg: "bg-[#9ab8b0]",
+    textCol: "text-primary",
+    accent: "text-[#0f2e2d]"
+  },
+  {
+    name: "Karthik Ramanathan",
+    text: "The doctors took the time to explain every detail of my treatment. Completely painless and exceptional attention to hygiene and comfort.",
+    treatment: "Dental Restorations",
+    category: "Prosthodontics",
+    bg: "bg-[#f4f2ea]",
+    textCol: "text-primary",
+    accent: "text-accent"
   }
 ];
 
-const FADE_UP = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.32, 0.72, 0, 1] as [number, number, number, number] } }
-};
-
 export function ReviewsSection() {
-  const featuredReview = reviews[0];
-  const supportingReviews = reviews.slice(1);
-
   return (
-    <section id="reviews" className="bg-[#fdfbf7] text-[#0a192f] w-full py-24 md:py-32 px-6 lg:px-12 flex flex-col items-center">
+    <section id="reviews" className="relative w-full overflow-hidden bg-background py-24 lg:py-32 font-manrope">
+      {/* Ambient Subsurface Luster */}
+      <div className="pointer-events-none absolute -top-40 -right-40 h-[32rem] w-[32rem] rounded-full bg-[#9df1f3]/30 blur-3xl mix-blend-multiply"></div>
+      <div className="pointer-events-none absolute -bottom-48 -left-20 h-[30rem] w-[30rem] rounded-full bg-[#e3e2df]/60 blur-3xl"></div>
       
-      {/* HEADER SECTION */}
-      <motion.div
-        initial="hidden" whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.15 } } }}
-        className="max-w-[800px] flex flex-col items-center text-center mb-20"
-      >
-        <motion.span variants={FADE_UP} className="text-xs font-semibold tracking-[0.2em] uppercase text-accent mb-6 block">
-          PATIENT EXPERIENCES
-        </motion.span>
+      <div className="relative mx-auto max-w-[1400px] px-6 md:px-8 lg:px-16">
         
-        <motion.h2 variants={FADE_UP} className="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.1] tracking-tight mb-16 text-[#0a192f]">
-          What our patients say.
-        </motion.h2>
-
-        <motion.div variants={FADE_UP} className="flex flex-col items-center justify-center">
-          <h3 className="text-5xl md:text-6xl font-serif font-light text-[#0a192f] leading-none mb-3">
-            4.9
-          </h3>
-          <div className="flex items-center gap-1.5 justify-center mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-[#0a192f] text-[#0a192f]" />
-            ))}
-          </div>
-          <p className="text-xs tracking-[0.2em] uppercase font-semibold text-[#0a192f]/60">
-            Google Rating
-          </p>
-        </motion.div>
-      </motion.div>
-
-      {/* EDITORIAL REVIEWS LAYOUT */}
-      <div className="w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-        
-        {/* LEFT COLUMN: Featured Review */}
-        <motion.div 
-          className="lg:col-span-7 flex flex-col relative"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Subtle giant decorative quote mark */}
-          <span className="absolute -top-12 -left-6 md:-left-8 text-[140px] md:text-[180px] font-serif text-[#0a192f]/5 leading-none select-none pointer-events-none">
-            &ldquo;
-          </span>
-
-          <div className="relative z-10 pt-6 md:pt-10">
-            <p className="text-2xl md:text-4xl lg:text-[40px] font-serif text-[#0a192f] leading-[1.4] mb-12 font-light">
-              &ldquo;{featuredReview.text}&rdquo;
+        {/* Upper Section: Asymmetric Header & Featured Testimonial Anchor */}
+        <div className="grid grid-cols-1 items-start gap-8 lg:gap-12 lg:grid-cols-12 mb-16 lg:mb-24">
+          
+          {/* Left Column: Editorial Eyebrow, Narrative & Metric Summary (7 Cols) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col lg:col-span-7 pr-0 lg:pr-12"
+          >
+            <div className="inline-flex items-center gap-2 self-start rounded-full bg-accent/10 px-4 py-1.5 mb-6">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+              <span className="font-manrope text-label font-semibold  tracking-[0.18em] text-accent">Patient Experiences</span>
+            </div>
+            
+            <h2 className="font-newsreader text-h2 md:text-h1 lg:text-h1 text-primary tracking-tight leading-[1.1]">
+              Gentle dental care. <br className="hidden sm:inline" />
+              <span className="italic font-light text-accent">Beautiful smiles.</span>
+            </h2>
+            
+            <p className="mt-6 max-w-xl font-manrope text-lead text-secondary leading-relaxed">
+              Patient experiences reflect our commitment to thoughtful, gentle dental care and precision aesthetic outcomes in a calm clinical atmosphere.
             </p>
-            <div className="flex items-center gap-6">
-              <div className="h-[1px] w-8 md:w-12 bg-[#0a192f]/20" />
-              <div className="flex flex-col gap-1.5">
-                <span className="text-sm font-semibold tracking-[0.1em] uppercase text-[#0a192f]">
-                  {featuredReview.name}
-                </span>
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-accent text-accent" />
-                  ))}
+            
+            {/* Metric Summary & Trust Pill Anchor */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+              {/* Google Aggregate Pane */}
+              <div className="sm:col-span-7 flex items-center gap-6 rounded-xl bg-white p-6 shadow-sm border border-[#e3e2df]/50 transition-all duration-300 hover:shadow-md">
+                <div className="flex flex-col items-start">
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-newsreader text-h2 font-bold text-primary leading-none">4.9</span>
+                    <span className="font-manrope text-label font-semibold text-secondary tracking-widest">/ 5.0</span>
+                  </div>
+                  <div aria-label="5 out of 5 stars" className="mt-2 flex text-accent">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <div className="h-10 w-px bg-[#e3e2df]"></div>
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-1.5 text-primary font-manrope text-body font-bold">
+                    <span>Google Rating</span>
+                    <BadgeCheck className="w-4 h-4 text-accent" />
+                  </div>
+                  <span className="font-manrope text-ui text-secondary">Certified Patient Reviews</span>
                 </div>
               </div>
             </div>
-          </div>
-        </motion.div>
-
-        {/* RIGHT COLUMN: Supporting Reviews */}
-        <div className="lg:col-span-5 flex flex-col mt-12 lg:mt-0 pt-16 lg:pt-0 border-t border-[#0a192f]/10 lg:border-t-0">
-          {supportingReviews.map((review, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="flex flex-col pb-12 mb-12 border-b border-[#0a192f]/10 last:border-0 last:mb-0 last:pb-0"
-            >
-              <div className="flex items-center gap-1 mb-5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-accent/80 text-accent/80" />
-                ))}
+          </motion.div>
+          
+          {/* Right Column: Featured Anchor Testimonial Vitrine (5 Cols) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative lg:col-span-5 mt-8 lg:mt-0"
+          >
+            <div className="relative flex flex-col justify-between overflow-hidden rounded-xl rounded-br-none bg-white text-primary p-8 md:p-10 shadow-sm border border-[#e3e2df] transition-all duration-500 hover:-translate-y-1 hover:shadow-lg min-h-[380px]">
+              <div className="relative z-10 flex flex-col">
+                <div className="flex items-center justify-between">
+                  <div aria-label="5 stars" className="flex text-accent">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" />
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 font-manrope text-label font-semibold tracking-widest  text-accent">
+                    <BadgeCheck className="w-3.5 h-3.5" />
+                    Verified Care
+                  </span>
+                </div>
+                
+                <blockquote className="mt-8 font-manrope text-lead md:text-lead text-primary leading-relaxed font-medium">
+                  &ldquo;{featuredReview.text}&rdquo;
+                </blockquote>
               </div>
               
-              <p className="text-lg md:text-xl font-light text-[#0a192f]/80 leading-relaxed mb-8">
-                &ldquo;{review.text}&rdquo;
-              </p>
+              <div className="relative z-10 mt-12">
+                <div className="w-full h-px bg-[#e3e2df] mb-6"></div>
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col">
+                    <span className="font-manrope text-lead text-primary font-bold tracking-tight">&mdash; {featuredReview.name}</span>
+                    <span className="font-manrope text-ui text-secondary mt-0.5">{featuredReview.treatment}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 rounded-full bg-[#f2f1ed] px-3 py-1 text-secondary font-manrope text-label font-semibold tracking-widest ">
+                    <span>Google Review</span>
+                  </div>
+                </div>
+              </div>
               
-              <span className="text-xs font-semibold tracking-[0.15em] uppercase text-[#0a192f]/60">
-                {review.name}
-              </span>
+              {/* Halftone Dot-Matrix Corner Triangle Pattern */}
+              <div className="pointer-events-none absolute bottom-0 right-0 w-16 h-16 opacity-30">
+                <svg className="w-full h-full text-primary fill-current" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern height="5" id="dot-grid-1" patternUnits="userSpaceOnUse" width="5" x="0" y="0">
+                      <circle cx="2.5" cy="2.5" fill="currentColor" r="1.2"></circle>
+                    </pattern>
+                    <mask id="corner-mask-1">
+                      <polygon fill="white" points="64,0 64,64 0,64"></polygon>
+                    </mask>
+                  </defs>
+                  <polygon fill="url(#dot-grid-1)" mask="url(#corner-mask-1)" points="64,0 64,64 0,64"></polygon>
+                </svg>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* Lower Section: 3-Column Supporting Testimonial Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {supportingReviews.map((review, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 + (idx * 0.1) }}
+              className={`relative flex flex-col justify-between overflow-hidden rounded-xl rounded-br-none ${review.bg} ${review.textCol} p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-lg min-h-[340px]`}
+            >
+              <div className="relative z-10 flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <div aria-label="5 stars" className={`flex ${review.accent}`}>
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <span className={`font-manrope text-label font-bold tracking-widest ${review.accent}`}>
+                    {review.category}
+                  </span>
+                </div>
+                <p className="font-manrope text-body leading-relaxed">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+              </div>
+              
+              <div className="relative z-10 mt-12 pt-2">
+                <div className={`w-full h-px ${review.textCol} opacity-20 mb-6`}></div>
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col">
+                    <span className="font-manrope text-body font-bold">&mdash; {review.name}</span>
+                    <span className="font-manrope text-ui opacity-80 mt-0.5">{review.treatment}</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Halftone Dot-Matrix Corner Pattern */}
+              <div className="pointer-events-none absolute bottom-0 right-0 w-16 h-16 opacity-10">
+                <svg className="w-full h-full fill-current" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern height="5" id={`dot-grid-sub-${idx}`} patternUnits="userSpaceOnUse" width="5" x="0" y="0">
+                      <circle cx="2.5" cy="2.5" fill="currentColor" r="1.2"></circle>
+                    </pattern>
+                    <mask id={`corner-mask-sub-${idx}`}>
+                      <polygon fill="white" points="64,0 64,64 0,64"></polygon>
+                    </mask>
+                  </defs>
+                  <polygon fill={`url(#dot-grid-sub-${idx})`} mask={`url(#corner-mask-sub-${idx})`} points="64,0 64,64 0,64"></polygon>
+                </svg>
+              </div>
             </motion.div>
           ))}
         </div>
-
       </div>
-
     </section>
   );
 }

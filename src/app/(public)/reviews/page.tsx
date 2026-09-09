@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function ReviewsPage() {
   return (
-    <main className="min-h-screen bg-[#fdfbf7] text-[#0a192f] flex flex-col w-full overflow-hidden selection:bg-[#0a192f] selection:text-[#fdfbf7]">
+    <main className="min-h-screen bg-background text-primary flex flex-col w-full overflow-hidden selection:bg-primary selection:text-primary-foreground">
       
       {/* Use the shared Reviews component integrated on the homepage */}
       <ReviewsSection />
@@ -21,12 +21,12 @@ export default function ReviewsPage() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <h2 className="text-3xl md:text-5xl font-serif font-light text-white leading-tight mb-8">
+            <h2 className="text-h2 md:text-h1 font-serif font-light text-white leading-tight mb-8">
               Experience the difference of calm, precision-driven care.
             </h2>
             <Link 
               href="/#book" 
-              className="inline-flex items-center justify-center bg-white text-[#0a192f] px-8 py-4 rounded-full font-medium text-sm tracking-wide hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-full font-medium text-ui tracking-wide hover:scale-[1.02] active:scale-[0.98] transition-all"
             >
               BOOK A CONSULTATION
             </Link>

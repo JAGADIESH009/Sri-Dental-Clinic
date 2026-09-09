@@ -46,19 +46,19 @@ export default function AdminLogin() {
       <Card className="w-full max-w-md shadow-2xl border-none">
         <CardHeader className="space-y-1 pb-8 pt-8">
           <div className="flex justify-center mb-6">
-            <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-2xl">
+            <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-h3">
               SD
             </div>
           </div>
-          <CardTitle className="text-2xl text-center font-heading text-primary">Sri Dental Clinic</CardTitle>
-          <CardDescription className="text-center text-base">
+          <CardTitle className="text-h3 text-center font-heading text-primary">Sri Dental Clinic</CardTitle>
+          <CardDescription className="text-center text-body">
             Admin Dashboard Login
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             {error && (
-              <div className="p-3 text-sm text-destructive bg-destructive/10 rounded-md border border-destructive/20 text-center">
+              <div className="p-3 text-ui text-destructive bg-destructive/10 rounded-md border border-destructive/20 text-center">
                 {error}
               </div>
             )}

@@ -57,7 +57,7 @@ export function Navbar() {
               <Image src="/logo.png" alt="Sri Dental Clinic Logo" fill className="object-contain" sizes="(max-width: 768px) 40px, 48px" priority />
             </div>
             <span className={cn(
-              "font-heading font-semibold text-lg tracking-tight transition-colors hidden sm:block",
+              "font-heading font-semibold text-lead tracking-tight transition-colors hidden sm:block",
               isScrolled ? "text-primary" : "text-white"
             )}>
               Sri Dental Clinic
@@ -82,7 +82,7 @@ export function Navbar() {
               key={item.name}
               href={item.href}
               className={cn(
-                "text-sm font-medium leading-6 transition-colors",
+                "text-ui font-medium leading-6 transition-colors",
                 isScrolled ? "text-primary/80 hover:text-accent" : "text-white/80 hover:text-white"
               )}
             >
@@ -114,7 +114,7 @@ export function Navbar() {
         <div className="lg:hidden fixed inset-0 z-[100] bg-background flex flex-col overflow-y-auto">
           <div className="flex items-center justify-between px-6 py-6 border-b border-border shrink-0">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
-               <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-sm">
+               <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white font-heading font-bold text-ui">
                 SD
               </div>
               <span className="font-heading font-semibold text-primary">Sri Dental Clinic</span>
@@ -136,7 +136,7 @@ export function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary hover:bg-secondary"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-body font-semibold leading-7 text-primary hover:bg-secondary"
                   >
                     {item.name}
                   </a>
@@ -146,7 +146,7 @@ export function Navbar() {
                 <a
                   href="#book"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-secondary"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-body font-semibold leading-7 text-primary hover:bg-secondary"
                 >
                   Book Appointment
                 </a>

@@ -8,42 +8,21 @@ export function MobileActionBar() {
       <div className="w-full bg-white/95 backdrop-blur-md border border-[#0a192f]/10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-full flex items-center p-1.5 gap-1">
         
         <a 
-          href="tel:+919866496237"
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-full text-[#0a192f] hover:bg-black/5 transition-colors"
+          href="tel:+919000000000"
+          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-full text-primary hover:bg-black/5 transition-colors"
         >
           <Phone className="h-[15px] w-[15px]" strokeWidth={2.5} />
-          <span className="text-[11px] font-medium tracking-wide">Call</span>
+          <span className="text-label font-medium tracking-wide">Call</span>
         </a>
         
-        <div className="w-[1px] h-5 bg-[#0a192f]/10 shrink-0" />
-        
-        <a 
-          href="https://wa.me/9866496237"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-full text-[#0a192f] hover:bg-black/5 transition-colors"
-        >
-          <svg 
-            viewBox="0 0 24 24" 
-            width="15" 
-            height="15" 
-            stroke="currentColor" 
-            strokeWidth="2.5" 
-            fill="none" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-          >
-            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-          </svg>
-          <span className="text-[11px] font-medium tracking-wide">WhatsApp</span>
-        </a>
+
 
         <a 
           href="#book"
           className="flex-[1.1] flex items-center justify-center gap-1.5 bg-accent text-accent-foreground py-2.5 px-2 rounded-full shadow-sm hover:bg-accent/90 transition-all ml-1 shrink-0"
         >
           <CalendarPlus className="h-[15px] w-[15px]" strokeWidth={2.5} />
-          <span className="text-[11px] font-semibold tracking-wide">Book</span>
+          <span className="text-label font-semibold tracking-wide">Book</span>
         </a>
         
       </div>

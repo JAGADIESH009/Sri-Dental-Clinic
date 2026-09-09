@@ -23,41 +23,41 @@ export default async function AdminDashboard() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Appointments</CardTitle>
+            <CardTitle className="text-ui font-medium">Total Appointments</CardTitle>
             <CalendarDays className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.appointments}</div>
+            <div className="text-h3 font-bold">{stats.appointments}</div>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Pending Requests</CardTitle>
+            <CardTitle className="text-ui font-medium">Pending Requests</CardTitle>
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.pending}</div>
+            <div className="text-h3 font-bold">{stats.pending}</div>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Doctors</CardTitle>
+            <CardTitle className="text-ui font-medium">Active Doctors</CardTitle>
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.doctors}</div>
+            <div className="text-h3 font-bold">{stats.doctors}</div>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Services</CardTitle>
+            <CardTitle className="text-ui font-medium">Services</CardTitle>
             <Stethoscope className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{stats.services}</div>
+            <div className="text-h3 font-bold">{stats.services}</div>
           </CardContent>
         </Card>
       </div>
@@ -70,18 +70,18 @@ export default async function AdminDashboard() {
           <CardContent>
             <div className="space-y-8">
               {recentAppointments.length === 0 ? (
-                <p className="text-muted-foreground text-sm">No recent appointments.</p>
+                <p className="text-muted-foreground text-ui">No recent appointments.</p>
               ) : (
                 recentAppointments.map((app) => (
                   <div key={app.id} className="flex items-center">
                     <div className="ml-4 space-y-1">
-                      <p className="text-sm font-medium leading-none">{app.patientName}</p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-ui font-medium leading-none">{app.patientName}</p>
+                      <p className="text-ui text-muted-foreground">
                         {app.date} at {app.time} - {app.service.name}
                       </p>
                     </div>
                     <div className="ml-auto font-medium">
-                      <span className={`text-xs px-2 py-1 rounded-full ${app.status === 'PENDING' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>
+                      <span className={`text-label px-2 py-1 rounded-full ${app.status === 'PENDING' ? 'bg-yellow-100 text-yellow-700' : 'bg-green-100 text-green-700'}`}>
                         {app.status}
                       </span>
                     </div>
