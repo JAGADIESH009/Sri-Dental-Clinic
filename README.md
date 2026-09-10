@@ -9,6 +9,26 @@ A modern Next.js web application for Sri Dental Clinic.
 - **Database**: Prisma ORM
 - **Authentication**: NextAuth (Auth.js)
 
+## Project Structure
+
+```text
+/
+├── prisma/             # Database schema and local SQLite DB
+├── public/             # Static assets (images, icons)
+├── scripts/            # Build and database preparation scripts
+├── src/
+│   ├── actions/        # Server actions for data mutation
+│   ├── app/            # Next.js App Router
+│   │   ├── (admin)/    # Admin dashboard routes
+│   │   ├── (public)/   # Public website routes
+│   │   └── api/        # API routes and Auth.js handlers
+│   ├── components/     # React components (home, layout, ui)
+│   └── lib/            # Shared utilities and Auth.js config
+├── .env.example        # Environment variable template
+├── components.json     # shadcn/ui configuration
+└── package.json        # Dependencies and npm scripts
+```
+
 ## Local Development
 
 1. **Install Dependencies**
