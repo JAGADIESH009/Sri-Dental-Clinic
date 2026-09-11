@@ -59,7 +59,7 @@ model Appointment {
 
 model ClinicSettings {
   id                   String  @id @default("singleton")
-  clinicName           String  @default("Sri Dental Clinic")
+  clinicName           String  @default("Unity Dental Clinics")
   tagline              String  @default("Bright Smiles Rooted in Tradition")
   phone                String  @default("+91 90000 00000")
   whatsapp             String  @default("+91 9000000000")

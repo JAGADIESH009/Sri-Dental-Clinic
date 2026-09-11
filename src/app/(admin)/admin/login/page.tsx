@@ -50,7 +50,7 @@ export default function AdminLogin() {
               SD
             </div>
           </div>
-          <CardTitle className="text-h3 text-center font-heading text-primary">Sri Dental Clinic</CardTitle>
+          <CardTitle className="text-h3 text-center font-heading text-primary">Unity Dental Clinics</CardTitle>
           <CardDescription className="text-center text-body">
             Admin Dashboard Login
           </CardDescription>

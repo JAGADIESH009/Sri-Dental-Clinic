@@ -6,10 +6,10 @@ import Image from "next/image";
 const navigation = {
   main: [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Treatments", href: "#treatments" },
-    { name: "Doctors", href: "#doctors" },
-    { name: "FAQ", href: "#faq" },
+    { name: "About", href: "/#about" },
+    { name: "Treatments", href: "/#treatments" },
+    { name: "Doctors", href: "/#doctors" },
+    { name: "FAQ", href: "/#faq" },
   ],
 };
 
@@ -21,14 +21,14 @@ export function Footer() {
           <div className="space-y-8">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-12 shrink-0 bg-white rounded-full p-1 overflow-hidden">
-                <Image src="/logo.png" alt="Sri Dental Clinic Logo" fill className="object-contain p-1" sizes="48px" />
+                <Image src="/logo.png" alt="Unity Dental Clinics Logo" fill className="object-contain p-1" sizes="48px" />
               </div>
               <span className="font-heading font-semibold text-h3 tracking-tight text-white">
-                Sri Dental Clinic
+                Unity Dental Clinics
               </span>
             </div>
             <p className="text-ui leading-6 text-primary-foreground/80 max-w-xs font-heading font-medium tracking-wide">
-              &quot;Bright Smiles Rooted in Tradition&quot;
+              &quot;United by care. Defined by your smile.&quot;
             </p>
             <div className="flex space-x-6">
               {/* Social links if any */}
@@ -48,7 +48,7 @@ export function Footer() {
                     </li>
                   ))}
                   <li>
-                    <Link href="#book" className="text-ui leading-6 text-accent font-medium hover:text-accent/80 transition-colors">
+                    <Link href="/appointment" className="text-ui leading-6 text-accent font-medium hover:text-accent/80 transition-colors">
                       Book Appointment
                     </Link>
                   </li>
@@ -58,11 +58,16 @@ export function Footer() {
                 <h3 className="text-ui font-semibold leading-6 text-white font-heading tracking-wide ">Contact</h3>
                 <ul role="list" className="mt-6 space-y-4 text-ui leading-6 text-primary-foreground/70">
                   <li>
-                    Bengaluru,<br />
-                    Karnataka, India
+                    43-106/1-60, Andhra Prabha Colony Rd,<br />
+                    near Vishal Mart, Ajith, Ajit Singh Nagar,<br />
+                    PNT Colony, Vijayawada,<br />
+                    Andhra Pradesh 520015, India
                   </li>
                   <li>
-                    <a href="tel:+919000000000" className="hover:text-white transition-colors">+91 90000 00000</a>
+                    <a href="tel:+918734934747" className="hover:text-white transition-colors">+91 87349 34747</a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/unitydentalclinic_vijayawada/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
                   </li>
                 </ul>
               </div>
@@ -72,8 +77,8 @@ export function Footer() {
                 <h3 className="text-ui font-semibold leading-6 text-white font-heading tracking-wide ">Hours</h3>
                 <ul role="list" className="mt-6 space-y-4 text-ui leading-6 text-primary-foreground/70">
                   <li>Everyday</li>
-                  <li>10:00 AM – 2:00 PM</li>
-                  <li>5:00 PM – 8:30 PM</li>
+                  <li>10:00 AM - 2:00 PM</li>
+                  <li>5:00 PM - 8:30 PM</li>
                   <li className="text-label mt-4 text-primary-foreground/50">Appointment Required</li>
                 </ul>
               </div>
@@ -91,7 +96,7 @@ export function Footer() {
         
         <div className="mt-16 border-t border-border/10 pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-label leading-5 text-primary-foreground/50">
-            &copy; {new Date().getFullYear()} Sri Dental Clinic. All rights reserved.
+            &copy; {new Date().getFullYear()} Unity Dental Clinics. All rights reserved.
           </p>
 
         </div>

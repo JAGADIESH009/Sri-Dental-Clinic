@@ -68,7 +68,7 @@ export default async function AdminDashboardLayout({
       {/* Main content */}
       <main className="flex-1 sm:pl-64">
         <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b bg-background px-6 sm:px-8 shadow-sm">
-          <h1 className="text-lead font-semibold tracking-tight">Sri Dental Clinic Admin</h1>
+          <h1 className="text-lead font-semibold tracking-tight">Unity Dental Clinics Admin</h1>
         </header>
         <div className="p-6 sm:p-8">
           {children}

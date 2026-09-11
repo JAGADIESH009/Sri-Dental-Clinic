@@ -1,6 +1,6 @@
-# Sri Dental Clinic
+# Unity Dental Clinics
 
-A modern Next.js web application for Sri Dental Clinic.
+A modern Next.js web application for Unity Dental Clinics.
 
 ## Tech Stack
 

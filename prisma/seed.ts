@@ -17,10 +17,10 @@ async function main() {
   })
 
   // Doctors
-  const doctors = [
-    { name: 'Dr. Ananya Rao', qualification: 'MDS', designation: 'Oral & Maxillofacial Surgeon', displayOrder: 1 },
-    { name: 'Dr. Rohan Mehta', qualification: 'MDS', designation: 'Oral & Maxillofacial Surgeon', displayOrder: 2 }
-  ]
+  const doctors: any[] = [
+    // Replaced fictional doctors with generic services for seed purposes if needed,
+    // or simply provide empty to avoid inventing doctors
+  ];
 
   for (const d of doctors) {
     const existing = await prisma.doctor.findFirst({ where: { name: d.name } })
@@ -55,9 +55,9 @@ async function main() {
   // FAQ
   const faqs = [
     { question: 'How do I book an appointment?', answer: 'You can book an appointment directly through our website by clicking the "Book Appointment" button, or you can call us.', displayOrder: 1 },
-    { question: 'What are the clinic timings?', answer: 'We are open from 10:00 AM to 2:00 PM and 5:00 PM to 8:30 PM.', displayOrder: 2 },
-    { question: 'Where is Sri Dental Clinic located?', answer: 'We are located in Bengaluru, Karnataka.', displayOrder: 3 },
-    { question: 'How can I contact the clinic?', answer: 'You can reach us by phone at +91 90000 00000.', displayOrder: 4 },
+    { question: 'What are your operating hours?', answer: 'We are open until 9 PM.', displayOrder: 2 },
+    { question: 'Where is Unity Dental Clinics located?', answer: 'We are located at 43-106/1-60, Andhra Prabha Colony Rd, near Vishal Mart, Ajith, Ajit Singh Nagar, PNT Colony, Vijayawada, Andhra Pradesh 520015, India.', displayOrder: 3 },
+    { question: 'How can I contact the clinic?', answer: 'You can reach us by phone at +91 87349 34747.', displayOrder: 4 },
   ]
 
   for (const f of faqs) {

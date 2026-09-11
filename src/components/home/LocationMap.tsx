@@ -6,8 +6,8 @@ import * as maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 const CLINIC_COORDS = {
-  lat: 12.9715987,
-  lng: 77.5945627
+  lat: 16.5440,
+  lng: 80.6480
 };
 
 // Raster tile style using OpenStreetMap — guaranteed to render roads, labels, and detail
@@ -88,7 +88,7 @@ export default function LocationMap() {
             <div className="w-14 h-14 bg-white rounded-full ring-2 ring-[#0a192f] flex items-center justify-center p-2 z-10 relative shadow-sm overflow-hidden transition-transform duration-300">
                <img 
                  src="/logo.png" 
-                 alt="Sri Dental Clinic" 
+                 alt="Unity Dental Clinics" 
                  className="w-10 h-10 object-contain"
                />
             </div>
